@@ -1,0 +1,129 @@
+---
+---
+
+<a href="index.astro"><img src="/img/kune.png" alt="" /></a>
+<div class="nav_container">
+  <div id="burger-menu">
+    <span></span>
+  </div>
+
+  <nav id="menu">
+    <ul>
+      <li><a href="/">LINEUP</a></li>
+      <li><a href="#">PRACTICAL INFO</a></li>
+      <li><a href="#">ABOUT</a></li>
+    </ul>
+  </nav>
+</div>
+
+<script src="../scripts/burger.js"></script>
+
+<style>
+  #menu li {
+    display: inline-block;
+  }
+  #menu a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5em;
+  }
+  @media screen and (max-width: 900px) {
+    .nav_container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    #burger-menu {
+      cursor: pointer;
+      height: 27px;
+      width: 27px;
+      margin: 25px;
+      overflow: visible;
+      position: relative;
+      z-index: 2;
+    }
+    #burger-menu span,
+    #burger-menu span:before,
+    #burger-menu span:after {
+      background: #de7914;
+      display: block;
+      height: 3px;
+      opacity: 1;
+      position: absolute;
+      transition: 0.3s ease-in-out;
+    }
+    #burger-menu span:before,
+    #burger-menu span:after {
+      content: "";
+    }
+    #burger-menu span:before {
+      left: 0px;
+      top: -10px;
+      width: 27px;
+    }
+    #burger-menu span {
+      right: 0px;
+      top: 13px;
+      width: 27px;
+    }
+    #burger-menu span:after {
+      left: 0px;
+      top: 10px;
+      width: 27px;
+    }
+    #burger-menu.close span:before {
+      top: 0px;
+      transform: rotate(90deg);
+      width: 27px;
+      background: #de7914;
+    }
+    #burger-menu.close span {
+      transform: rotate(-45deg);
+      top: 13px;
+      width: 27px;
+      background: #de7914;
+    }
+    #burger-menu.close span:after {
+      top: 0px;
+      left: 0;
+      transform: rotate(90deg);
+      opacity: 0;
+      width: 0;
+      background: #de7914;
+    }
+
+    #menu {
+      z-index: 1;
+      min-width: 100%;
+      min-height: 100%;
+      position: fixed;
+      top: 0;
+      height: 0;
+      visibility: hidden;
+      opacity: 0;
+      text-align: center;
+      padding-top: 20px;
+      transition: all 0.3s ease-in-out;
+    }
+    #menu.overlay {
+      visibility: visible;
+      opacity: 1;
+      padding-top: 100px;
+      background: linear-gradient(180deg, rgb(27, 69, 205) 0%, #668bc3 63.54%);
+    }
+    #menu ul {
+      padding: 0;
+    }
+    #menu li {
+      list-style: none;
+      display: initial;
+    }
+    #menu a {
+      color: #fff;
+      display: block;
+      font-size: 32px;
+      margin-bottom: 30px;
+      text-decoration: none;
+    }
+  }
+</style>
