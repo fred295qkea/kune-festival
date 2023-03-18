@@ -16,6 +16,7 @@
 @media (min-width: 850px) {
   .ungdomsoen_tekst {
     display: flex;
+    flex-direction: row-reverse;
     grid-template-columns: 1fr 1fr;
   }
 }
