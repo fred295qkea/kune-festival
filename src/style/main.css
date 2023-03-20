@@ -1,7 +1,10 @@
 * {
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   box-sizing: border-box;
+=======
+>>>>>>> 7f7267876ab297016c2352ee049e1162d684b10d
 }
 
 img {
@@ -10,9 +13,23 @@ img {
   display: block;
 }
 
+<<<<<<< HEAD
 header {
   display: flex;
   flex-direction: column;
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+body {
+  background: linear-gradient(180deg, rgb(27, 69, 205) 0%, #668bc3 63.54%);
+>>>>>>> 7f7267876ab297016c2352ee049e1162d684b10d
 }
 
 .footer_flex {
