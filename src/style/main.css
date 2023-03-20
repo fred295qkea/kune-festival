@@ -18,8 +18,10 @@ img {
 img {
   width: 100%;
 }
+
 body {
   background: linear-gradient(180deg, rgb(27, 69, 205) 0%, #668bc3 63.54%);
+  font-family: "Montserrat", sans-serif;
 }
 
 .footer_flex {
@@ -28,10 +30,6 @@ body {
   align-items: center;
   background-color: transparent;
   padding: 20px 40px;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
 }
 
 h3 {
