@@ -1,6 +1,8 @@
 ---
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
+import Blob from "../components/blob.astro";
+
 import "../style/main.css";
 ---
 
@@ -12,14 +14,55 @@ import "../style/main.css";
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="/style/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Kune</title>
+    <title>Lineup</title>
   </head>
   <body>
     <header><Header /></header>
     <main>
       <h1>LINEUP</h1>
      <h3>WEDNESDAY <span class="date">JULY 20</span></h3>
-    </main>
+     <div class="lineup">
+     <Blob />
+    <Blob />
+     <Blob />
+     <Blob />
+     </div>
+     <h3>THURSDAY <span class="date">JULY 21</span></h3>
+          <div class="lineup">
+     <Blob />
+    <Blob />
+     <Blob />
+     <Blob />
+    <Blob />
+         </div>
+     <h3>FRIDAY <span class="date">JULY 22</span></h3>
+               <div class="lineup">
+      <Blob />
+    <Blob />
+     <Blob />
+     <Blob />
+    <Blob />
+    <Blob />
+         </div>
+     <h3>SATURDAY <span class="date">JULY 23</span></h3>
+    <div class="lineup">
+    <Blob />
+    <Blob />
+     <Blob />
+     <Blob />
+    <Blob />
+    <Blob />
+     </div>
+    <h3>SUNDAY <span class="date">JULY 24</span></h3>
+    <div class="lineup">
+    <Blob />
+    <Blob />
+     <Blob />
+     <Blob />
+     <Blob />
+    <Blob />
+             </div>
+</main>
     <footer><Footer /></footer>
   </body>
 </html>
@@ -30,9 +73,14 @@ import "../style/main.css";
     color: #A2CBFF;
   }
 
-
-  @media (min-width: 850px) {
-    
-    }
+  h3{
+    margin-top: 130px;
   }
+ @media (min-width: 850px) {
+    .lineup {
+      display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 60px;
+    }
+  
 </style>
