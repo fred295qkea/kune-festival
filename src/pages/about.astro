@@ -56,14 +56,14 @@ import Waves from "../components/waves.astro";
 </html>
 
 <style>
-  body {
+  .grid_about {
+    background: linear-gradient(180deg, rgb(27, 69, 205) 0%, #668bc3 63.54%);
+    margin-top: -5px;
   }
   @media (min-width: 850px) {
     .grid_about {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      background-image: linear-gradient(180deg, rgb(27, 69, 205) 0%, #668bc3 63.54%);
-      margin-top: -5px;
     }
     #order {
       order: -1;
@@ -71,7 +71,6 @@ import Waves from "../components/waves.astro";
     h1 {
       text-align: center;
       margin-bottom: 5px;
-      margin: right: 5px;
     }
     .grid_about div:first-child {
       display: flex;
