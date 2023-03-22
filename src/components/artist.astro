@@ -1,16 +1,33 @@
 ---
-const { artist } = Astro.props;
+
+const { artist, spilledag } = Astro.props;
 console.log(artist);
+
+let navnOnsdag
+let navnTorsdag
+let navnFredag
+let navnLørdag
+let navnSøndag
+
+if(artist.dag === "ONSDAG"){
+ navnOnsdag = artist.navn
+}
+
+
+
+
 ---
 <article>
 
+    
 
-<h3>{artist.navn}</h3>
-<p>{artist.dag}</p>
+
+<h3>{navnOnsdag}</h3>
 <p>{artist.scene}</p>
 
 
 </article>
 
 <style> 
+
 </style>

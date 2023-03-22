@@ -32,8 +32,11 @@ const data = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artis
     <main>
       <h1>LINEUP</h1>
 
+
       <h3>WEDNESDAY <span class="date">JULY 20</span></h3>
      <div class="lineup">
+
+
    
    
      </div>
@@ -53,16 +56,19 @@ const data = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artis
     <div class="lineup">
    
     </div>
-     
+
           <section class="artist">
               {
                 data.map((artist)=> {
+
                   return <Artist {artist}/>;
 
                 })
               }
               
           </section>
+     
+          
     </main >
     <footer><Footer /></footer>
   </body>
