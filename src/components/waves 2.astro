@@ -1,0 +1,22 @@
+---
+---
+
+<section class="waves_grid"><img src="/img/wave.svg" alt="wave" /><slot /></section>
+
+<style is:global>
+  .waves_grid {
+    display: grid;
+  }
+  .waves_grid > * {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .waves_grid img {
+    background-color: linear-gradient(180deg, #1b45cd 26.56%, #668bc3 100%);
+    max-width: none;
+
+    padding: none;
+    align-self: end;
+  }
+</style>
