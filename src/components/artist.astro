@@ -1,0 +1,9 @@
+---
+const { artist } = Astro.props;
+console.log(artist);
+---
+<article>
+<pre>{JSON.stringify(artist, null, 2)}</pre>
+<h3>{artist.navn}</h3>
+<hr></hr>
+</article>

@@ -2,29 +2,20 @@
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
 import Blob from "../components/blob.astro";
+import Artist from "../components/artist.astro";
 import "../style/main.css";
 
-
-const data = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister",{
+const data = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister",
+{
  method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
-  }
-}
-).then(res=>res.json());
-
-console.log(data);
-
-
-/*
-{
-    navn: 'STAN YAROSLAVSKY',
-    scene: 'SPACE',
-    dag: 'FREDAG',
-    tidspunkt: 15
   },
-  */
+}
+).then((res) => res.json());
+
 ---
+
 
 <html lang="en">
   <head>
@@ -43,46 +34,34 @@ console.log(data);
      <h3>WEDNESDAY <span class="date">JULY 20</span></h3>
      <div class="lineup">
      <Blob />
-    <Blob />
-     <Blob />
-     <Blob />
+   
      </div>
      <h3>THURSDAY <span class="date">JULY 21</span></h3>
           <div class="lineup">
-     <Blob />
-    <Blob />
-     <Blob />
-     <Blob />
-    <Blob />
+  
          </div>
      <h3>FRIDAY <span class="date">JULY 22</span></h3>
                <div class="lineup">
-      <Blob />
-    <Blob />
-     <Blob />
-     <Blob />
-    <Blob />
-    <Blob />
+    
          </div>
      <h3>SATURDAY <span class="date">JULY 23</span></h3>
     <div class="lineup">
-    <Blob />
-    <Blob />
-     <Blob />
-     <Blob />
-    <Blob />
-    <Blob />
+   
      </div>
     <h3>SUNDAY <span class="date">JULY 24</span></h3>
     <div class="lineup">
-    <Blob />
-    <Blob />
-     <Blob />
-     <Blob />
-     <Blob />
-    <Blob />
-             </div>
-</main>
+   
+    </div>
+          <section class="artist">
+              {
+                data.map((artist)=> {
+                  return <Artist {artist}/>;
+
+                })
+              }
+              <Artist />
+          </section>
+    </main >
     <footer><Footer /></footer>
   </body>
 </html>
