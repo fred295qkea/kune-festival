@@ -5,6 +5,51 @@ import Blob from "../components/blob.astro";
 import Artist from "../components/artist.astro";
 import "../style/main.css";
 
+const onsdag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.ONSDAG",
+{
+ method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
+  },
+}
+).then((res) => res.json());
+
+const torsdag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.TORSDAG",
+{
+ method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
+  },
+}
+).then((res) => res.json());
+const fredag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.FREDAG",
+{
+ method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
+  },
+}
+).then((res) => res.json());
+
+const lørdag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.LØRDAG",
+{
+ method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
+  },
+}
+).then((res) => res.json());
+
+const søndag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.SØNDAG",
+{
+ method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
+  },
+}
+).then((res) => res.json());
+
+
 const data = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister",
 {
  method: "GET",
@@ -35,29 +80,71 @@ const data = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artis
 
       <h3>WEDNESDAY <span class="date">JULY 20</span></h3>
      <div class="lineup">
+<div class="onsdag">
+                  {
+                onsdag.map((artist)=> {
 
+                  return <Artist {artist}/>;
 
-   
-   
+                })
+              }
+</div>
+
      </div>
      <h3>THURSDAY <span class="date">JULY 21</span></h3>
           <div class="lineup">
+            <div class="torsdag">
+                  {
+                torsdag.map((artist)=> {
+
+                  return <Artist {artist}/>;
+
+                })
+              }
+</div>
   
          </div>
      <h3>FRIDAY <span class="date">JULY 22</span></h3>
                <div class="lineup">
+                <div class="fredag">
+                  {
+                fredag.map((artist)=> {
+
+                  return <Artist {artist}/>;
+
+                })
+              }
+</div>
     
          </div>
      <h3>SATURDAY <span class="date">JULY 23</span></h3>
     <div class="lineup">
+      <div class="lørdag">
+                  {
+                lørdag.map((artist)=> {
+
+                  return <Artist {artist}/>;
+
+                })
+              }
+</div>
    
      </div>
     <h3>SUNDAY <span class="date">JULY 24</span></h3>
     <div class="lineup">
+      <div class="søndag">
+                  {
+                søndag.map((artist)=> {
+
+                  return <Artist {artist}/>;
+
+                })
+              }
+</div>
    
     </div>
 
-          <section class="artist">
+          <!-- <section class="artist">
               {
                 data.map((artist)=> {
 
@@ -66,7 +153,7 @@ const data = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artis
                 })
               }
               
-          </section>
+          </section> -->
      
           
     </main >
