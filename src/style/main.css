@@ -24,6 +24,7 @@ body {
   background: linear-gradient(180deg, rgb(27, 69, 205) 0%, #668bc3 63.54%);
   font-family: "Montserrat", sans-serif;
   color: white;
+  font-weight: 100;
 }
 
 .footer_flex {
@@ -36,6 +37,8 @@ body {
 
 h1 {
   font-size: 70px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
 }
 
 h2 {
@@ -61,7 +64,6 @@ p {
   }
 
   h3 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 40px;
   }
 

@@ -1,0 +1,22 @@
+.dates {
+  display: flex;
+  justify-content: end;
+}
+
+.ungdomsoen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote {
+  text-align: center;
+}
+
+@media (min-width: 850px) {
+  .ungdomsoen_tekst {
+    display: flex;
+    flex-direction: row-reverse;
+    grid-template-columns: 1fr 1fr;
+  }
+}
