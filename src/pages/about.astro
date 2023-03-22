@@ -8,7 +8,7 @@ import Waves from "../components/waves.astro";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/img/kune.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="/style/main.css" />
@@ -36,25 +36,31 @@ import Waves from "../components/waves.astro";
           </div>
         </article>
       </Waves>
-      <article class="grid_about">
-        <div>
-          <h2>DJ - Keeptress</h2>
-        </div>
-        <div id="order">
-          <h3>Vic, DJ/Producer</h3>
-          <p>“I did the closing on Wednesday. I had just arrived in Copenhagen the day before and barely made it to the festival, closing the stage in front of my friends and family along with a strangers, the vibe was so intimate and an hour after the start of my set I truly felt at home.”</p>
-        </div>
-      </article>
+      <Waves>
+        <article class="grid_about">
+          <div>
+            <h2>DJ - Keeptress</h2>
+          </div>
+          <div id="order">
+            <h3>Vic, DJ/Producer</h3>
+            <p>“I did the closing on Wednesday. I had just arrived in Copenhagen the day before and barely made it to the festival, closing the stage in front of my friends and family along with a strangers, the vibe was so intimate and an hour after the start of my set I truly felt at home.”</p>
+          </div>
+        </article>
+      </Waves>
     </main>
     <footer><Footer /></footer>
   </body>
 </html>
 
 <style>
+  body {
+  }
   @media (min-width: 850px) {
     .grid_about {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      background-image: linear-gradient(180deg, rgb(27, 69, 205) 0%, #668bc3 63.54%);
+      margin-top: -5px;
     }
     #order {
       order: -1;
