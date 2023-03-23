@@ -5,62 +5,47 @@ import Blob from "../components/blob.astro";
 import Artist from "../components/artist.astro";
 import "../style/main.css";
 
-const onsdag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.ONSDAG",
-{
- method: "GET",
+const onsdag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.ONSDAG", {
+  method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
   },
-}
-).then((res) => res.json());
+}).then((res) => res.json());
 
-const torsdag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.TORSDAG",
-{
- method: "GET",
+const torsdag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.TORSDAG", {
+  method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
   },
-}
-).then((res) => res.json());
-const fredag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.FREDAG",
-{
- method: "GET",
+}).then((res) => res.json());
+const fredag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.FREDAG", {
+  method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
   },
-}
-).then((res) => res.json());
+}).then((res) => res.json());
 
-const lørdag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.LØRDAG",
-{
- method: "GET",
+const lørdag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.LØRDAG", {
+  method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
   },
-}
-).then((res) => res.json());
+}).then((res) => res.json());
 
-const søndag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.SØNDAG",
-{
- method: "GET",
+const søndag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.SØNDAG", {
+  method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
   },
-}
-).then((res) => res.json());
+}).then((res) => res.json());
 
-
-const data = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister",
-{
- method: "GET",
+const data = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister", {
+  method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
   },
-}
-).then((res) => res.json());
-
+}).then((res) => res.json());
 ---
-
 
 <html lang="en">
   <head>
@@ -77,86 +62,57 @@ const data = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artis
     <main>
       <h1>LINEUP</h1>
 
-
       <h3>WEDNESDAY <span class="date">JULY 20</span></h3>
-     <div class="lineup">
-<div class="onsdag">
-                  {
-                onsdag.map((artist)=> {
-
-                  return <Artist {artist}/>;
-
-                })
-              }
-</div>
-
-     </div>
-     <h3>THURSDAY <span class="date">JULY 21</span></h3>
-          <div class="lineup">
-            <div class="torsdag">
-                  {
-                torsdag.map((artist)=> {
-
-                  return <Artist {artist}/>;
-
-                })
-              }
-</div>
-  
-         </div>
-     <h3>FRIDAY <span class="date">JULY 22</span></h3>
-               <div class="lineup">
-                <div class="fredag">
-                  {
-                fredag.map((artist)=> {
-
-                  return <Artist {artist}/>;
-
-                })
-              }
-</div>
-    
-         </div>
-     <h3>SATURDAY <span class="date">JULY 23</span></h3>
-    <div class="lineup">
-      <div class="lørdag">
-                  {
-                lørdag.map((artist)=> {
-
-                  return <Artist {artist}/>;
-
-                })
-              }
-</div>
-   
-     </div>
-    <h3>SUNDAY <span class="date">JULY 24</span></h3>
-    <div class="lineup">
-      <div class="søndag">
-                  {
-                søndag.map((artist)=> {
-
-                  return <Artist {artist}/>;
-
-                })
-              }
-</div>
-   
-    </div>
-
-          <!-- <section class="artist">
-              {
-                data.map((artist)=> {
-
-                  return <Artist {artist}/>;
-
-                })
-              }
-              
-          </section> -->
-     
-          
-    </main >
+      <div class="lineup">
+        <div class="artists">
+          {
+            onsdag.map((artist) => {
+              return <Artist {artist} />;
+            })
+          }
+        </div>
+      </div>
+      <h3>THURSDAY <span class="date">JULY 21</span></h3>
+      <div class="lineup">
+        <div class="artists">
+          {
+            torsdag.map((artist) => {
+              return <Artist {artist} />;
+            })
+          }
+        </div>
+      </div>
+      <h3>FRIDAY <span class="date">JULY 22</span></h3>
+      <div class="lineup">
+        <div class="artists">
+          {
+            fredag.map((artist) => {
+              return <Artist {artist} />;
+            })
+          }
+        </div>
+      </div>
+      <h3>SATURDAY <span class="date">JULY 23</span></h3>
+      <div class="lineup">
+        <div class="artists">
+          {
+            lørdag.map((artist) => {
+              return <Artist {artist} />;
+            })
+          }
+        </div>
+      </div>
+      <h3>SUNDAY <span class="date">JULY 24</span></h3>
+      <div class="lineup">
+        <div class="artists">
+          {
+            søndag.map((artist) => {
+              return <Artist {artist} />;
+            })
+          }
+        </div>
+      </div>
+    </main>
     <footer><Footer /></footer>
   </body>
 </html>
@@ -164,17 +120,27 @@ const data = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artis
 <style>
   .date {
     font-weight: bold;
-    color: #A2CBFF;
+    color: #a2cbff;
   }
 
-  h3{
+  h3 {
     margin-top: 130px;
+    margin-bottom: 30px;
   }
- @media (min-width: 850px) {
+
+  .lineup {
+    display: flex;
+    flex-direction: row;
+  }
+  /* .artists {
+    display: flex;
+    flex-direction: column;
+  } */
+
+  /* @media (min-width: 850px) {
     .lineup {
       display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 60px;
-    }
-  
+    } */
 </style>
