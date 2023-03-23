@@ -48,7 +48,7 @@ import Waves from "../components/waves.astro";
               <h2>DJ - Keeptress</h2>
             </div>
             <div id="order">
-              <h3>Vic, DJ/Producer</h3>
+              <h3 style="padding-bottom: 0;">Vic, DJ/Producer</h3>
               <p>“I did the closing on Wednesday. I had just arrived in Copenhagen the day before and barely made it to the festival, closing the stage in front of my friends and family along with a strangers, the vibe was so intimate and an hour after the start of my set I truly felt at home.”</p>
             </div>
           </article>
@@ -60,6 +60,13 @@ import Waves from "../components/waves.astro";
 </html>
 
 <style>
+  main h1,
+  main h2,
+  main h3 {
+    padding-bottom: 0;
+    text-align: center;
+    padding-bottom: 0;
+  }
   @media (min-width: 850px) {
     .grid_about {
       display: grid;
