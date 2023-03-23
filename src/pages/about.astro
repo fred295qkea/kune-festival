@@ -29,26 +29,30 @@ import Waves from "../components/waves.astro";
         Festival is an NGO made up of over 30 passionate and dedicated individuals who work voluntarily year-round to create this extraordinary experience. Our team is comprised of artists, musicians, designers, writers, project managers, and cultural enthusiasts, all united by our shared vision and values. We are motivated by the belief that art and culture have the power to create positive change in the world, and we are committed to working towards this goal by creating a unique platform that celebrates the Nordic underground talent. Our team is inspired by the creative community that we are building, and we are continually amazed by the skills and dedication of our members.
       </p>
       <Waves>
-        <article class="grid_about">
-          <div>
-            <h2>CO-HEAD OF VOLUNTEERS</h2>
-          </div>
-          <div>
-            <h3>Maria, 26 years, Polish</h3>
-            <p>“For me when I first attended KUNE it was a magical experience. I was in a pretty bad place in my life at that time and going to the island was the best decision I could ever make. Experiencing the festival - the music, the people, the community - was both like an escape and a therapy in one. ” “The best memory of the festival was in 2021 when I was dancing on top of a hill, next to one of the stages, together with 3 other people that I met 5 minutes before. I could really feel the community at that particular moment and how you can pass the energy from one to another. ”</p>
-          </div>
-        </article>
+        <div class="background">
+          <article class="grid_about">
+            <div>
+              <h2>CO-HEAD OF VOLUNTEERS</h2>
+            </div>
+            <div>
+              <h3>Maria, 26 years, Polish</h3>
+              <p>“For me when I first attended KUNE it was a magical experience. I was in a pretty bad place in my life at that time and going to the island was the best decision I could ever make. Experiencing the festival - the music, the people, the community - was both like an escape and a therapy in one. ” “The best memory of the festival was in 2021 when I was dancing on top of a hill, next to one of the stages, together with 3 other people that I met 5 minutes before. I could really feel the community at that particular moment and how you can pass the energy from one to another. ”</p>
+            </div>
+          </article>
+        </div>
       </Waves>
       <Waves>
-        <article class="grid_about">
-          <div>
-            <h2>DJ - Keeptress</h2>
-          </div>
-          <div id="order">
-            <h3>Vic, DJ/Producer</h3>
-            <p>“I did the closing on Wednesday. I had just arrived in Copenhagen the day before and barely made it to the festival, closing the stage in front of my friends and family along with a strangers, the vibe was so intimate and an hour after the start of my set I truly felt at home.”</p>
-          </div>
-        </article>
+        <div class="background">
+          <article class="grid_about">
+            <div>
+              <h2>DJ - Keeptress</h2>
+            </div>
+            <div id="order">
+              <h3>Vic, DJ/Producer</h3>
+              <p>“I did the closing on Wednesday. I had just arrived in Copenhagen the day before and barely made it to the festival, closing the stage in front of my friends and family along with a strangers, the vibe was so intimate and an hour after the start of my set I truly felt at home.”</p>
+            </div>
+          </article>
+        </div>
       </Waves>
     </main>
     <footer><Footer /></footer>
@@ -56,10 +60,6 @@ import Waves from "../components/waves.astro";
 </html>
 
 <style>
-  .grid_about {
-    background: linear-gradient(180deg, rgb(27, 69, 205) 0%, #668bc3 63.54%);
-    margin-top: -5px;
-  }
   @media (min-width: 850px) {
     .grid_about {
       display: grid;
