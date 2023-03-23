@@ -3,6 +3,7 @@ import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
 import Blob from "../components/blob.astro";
 import Artist from "../components/artist.astro";
+import Waves from "../components/waves.astro";
 import "../style/main.css";
 
 const onsdag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.ONSDAG", {
@@ -60,61 +61,80 @@ const data = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artis
   <body>
     <header><Header /></header>
     <main>
-      <h1>LINEUP</h1>
+      <div class="background">
+        <h1>LINEUP</h1>
 
-      <h3>WEDNESDAY <span class="date">JULY 20</span></h3>
-      <div class="lineup">
-        <div class="artists">
-          {
-            onsdag.map((artist) => {
-              return <Artist {artist} />;
-            })
-          }
+        <h3>WEDNESDAY <span class="date">JULY 20</span></h3>
+        <div class="lineup">
+          <div class="artists">
+            {
+              onsdag.map((artist) => {
+                return <Artist {artist} />;
+              })
+            }
+          </div>
         </div>
-      </div>
-      <h3>THURSDAY <span class="date">JULY 21</span></h3>
-      <div class="lineup">
-        <div class="artists">
-          {
-            torsdag.map((artist) => {
-              return <Artist {artist} />;
-            })
-          }
-        </div>
-      </div>
-      <h3>FRIDAY <span class="date">JULY 22</span></h3>
-      <div class="lineup">
-        <div class="artists">
-          {
-            fredag.map((artist) => {
-              return <Artist {artist} />;
-            })
-          }
-        </div>
-      </div>
-      <h3>SATURDAY <span class="date">JULY 23</span></h3>
-      <div class="lineup">
-        <div class="artists">
-          {
-            lørdag.map((artist) => {
-              return <Artist {artist} />;
-            })
-          }
-        </div>
-      </div>
-      <h3>SUNDAY <span class="date">JULY 24</span></h3>
-      <div class="lineup">
-        <div class="artists">
-          {
-            søndag.map((artist) => {
-              return <Artist {artist} />;
-            })
-          }
-        </div>
+        <Waves>
+          <div class="background">
+            <h3>THURSDAY <span class="date">JULY 21</span></h3>
+            <div class="lineup">
+              <div class="artists">
+                {
+                  torsdag.map((artist) => {
+                    return <Artist {artist} />;
+                  })
+                }
+              </div>
+            </div>
+            <Waves>
+              <div class="background">
+                <h3>FRIDAY <span class="date">JULY 22</span></h3>
+                <div class="lineup">
+                  <div class="artists">
+                    {
+                      fredag.map((artist) => {
+                        return <Artist {artist} />;
+                      })
+                    }
+                  </div>
+                </div>
+                <Waves>
+                  <div class="background">
+                    <h3>SATURDAY <span class="date">JULY 23</span></h3>
+                    <div class="lineup">
+                      <div class="artists">
+                        {
+                          lørdag.map((artist) => {
+                            return <Artist {artist} />;
+                          })
+                        }
+                      </div>
+                    </div>
+                    <Waves>
+                      <div class="background">
+                        <h3>SUNDAY <span class="date">JULY 24</span></h3>
+                        <div class="lineup">
+                          <div class="artists">
+                            {
+                              søndag.map((artist) => {
+                                return <Artist {artist} />;
+                              })
+                            }
+                          </div>
+                        </div>
+                      </div>
+                    </Waves>
+                  </div>
+                </Waves>
+              </div>
+            </Waves>
+          </div>
+        </Waves>
       </div>
     </main>
-    <footer><Footer /></footer>
   </body>
+
+  <footer><Footer /></footer>
 </html>
 
 <style>
@@ -124,18 +144,15 @@ const data = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artis
   }
 
   h3 {
-    margin-top: 130px;
-    margin-bottom: 30px;
+    padding: 70px 20px 20px 0;
   }
 
   .lineup {
     display: flex;
     flex-direction: row;
+    max-width: 1200px;
+    margin: auto;
   }
-  /* .artists {
-    display: flex;
-    flex-direction: column;
-  } */
 
   /* @media (min-width: 850px) {
     .lineup {
