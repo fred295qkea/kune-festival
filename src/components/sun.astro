@@ -1,0 +1,76 @@
+---
+const { size = "normal" } = Astro.props;
+---
+
+<svg class="streg" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1127.66 370.51">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: black;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="Layer_3" data-name="Layer 3">
+    <path class="cls-1" d="m.41,370.22C32.55,325.51,254.19,27.67,642.41,2.22c234.94-15.4,412.48,76.72,485,120"></path>
+  </g>
+</svg>
+
+<div class={size}>
+  <svg class="sun" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2600 2600">
+    <defs>
+      <style>
+        .cls-2 {
+          fill: url(#linear-gradient);
+        }
+      </style>
+      <linearGradient id="linear-gradient" x1="74.07" y1="1300" x2="2525.93" y2="1300" gradientTransform="translate(0 2600) rotate(-90)" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#a43bc9" stop-opacity=".25"></stop>
+        <stop offset=".11" stop-color="#af47a4" stop-opacity=".4"></stop>
+        <stop offset=".25" stop-color="#bd5678" stop-opacity=".58"></stop>
+        <stop offset=".4" stop-color="#c96254" stop-opacity=".73"></stop>
+        <stop offset=".55" stop-color="#d26c38" stop-opacity=".85"></stop>
+        <stop offset=".7" stop-color="#d87324" stop-opacity=".93"></stop>
+        <stop offset=".85" stop-color="#dc7718" stop-opacity=".98"></stop>
+        <stop offset="1" stop-color="#de7914"></stop>
+      </linearGradient>
+    </defs>
+    <ellipse class="cls-2" cx="1300" cy="1300" rx="1200" ry="1225.93"></ellipse>
+  </svg>
+</div>
+
+<style>
+  .streg {
+    width: 1000px;
+    position: absolute;
+    display: block;
+  }
+
+  .sun {
+    offset-path: path("m.41,370.22C32.55,325.51,254.19,27.67,642.41,2.22c234.94-15.4,412.48,76.72,485,120");
+    offset-distance: 100%;
+
+    animation-name: sun_kf;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+  }
+
+  .normal {
+    width: 20%;
+  }
+
+  .large {
+    width: 30%;
+  }
+
+  @keyframes sun_kf {
+    from {
+      offset-distance: 0%;
+    }
+    to {
+      offset-distance: 100%;
+    }
+  }
+</style>

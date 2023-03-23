@@ -2,6 +2,7 @@
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
 import Waves from "../components/waves.astro";
+import Sun from "../components/sun.astro";
 import "../style/main.css";
 ---
 
@@ -24,100 +25,115 @@ import "../style/main.css";
       <div class="navn">
         <h1 id="kune">KUNE</h1>
         <h1 id="festival">F<span style="visibility:hidden;">E</span>STIVAL</h1>
-      </div>
-      <h2 class="dates">20.07.2023 - 24.07.2023</h2>
-      <Waves>
-        <div class="background">
+        <main>
+          <Sun size="large" />
+
+          <h1>KUNE FESTIVAL</h1>
+          <h2 class="dates">20.07.2023 - 24.07.2023</h2>
           <h3 class="ungdomsoen">Ungdomsøen</h3>
           <div class="ungdomsoen_tekst">
-            <img class="flex-item" src="/img/ungdomsoen.jpeg" alt="ungdomsoen" />
-            <p class="flex-item">A 5-day electronic music festival that takes place on an island 30 minutes away from Copenhagen. A one-of-its-kind celebration of the Scandinavian underground culture. A playground with five stages, two art galleries, and multiple art installations. An intimate, holistic experience with access to a camping ground, food area, dipping spot, and unique sunsets. A true hidden gem.</p>
+            <img src="/img/ungdomsoen.jpeg" alt="ungdomsoen" />
+            <p>A 5-day electronic music festival that takes place on an island 30 minutes away from Copenhagen. A one-of-its-kind celebration of the Scandinavian underground culture. A playground with five stages, two art galleries, and multiple art installations. An intimate, holistic experience with access to a camping ground, food area, dipping spot, and unique sunsets. A true hidden gem.</p>
           </div>
-        </div>
-      </Waves>
-      <Waves>
-        <div class="background">
           <div class="quote">
             <h3>TOGETHER, WE DREAM THE WAKING DREAM</h3>
             <p>“A dream you dream alone is only a dream. A dream you dream together is reality”</p>
           </div>
-        </div>
-      </Waves>
+          <h2 class="dates">20.07.2023 - 24.07.2023</h2>
+          <Waves>
+            <div class="background">
+              <h3 class="ungdomsoen">Ungdomsøen</h3>
+              <div class="ungdomsoen_tekst">
+                <img class="flex-item" src="/img/ungdomsoen.jpeg" alt="ungdomsoen" />
+                <p class="flex-item">A 5-day electronic music festival that takes place on an island 30 minutes away from Copenhagen. A one-of-its-kind celebration of the Scandinavian underground culture. A playground with five stages, two art galleries, and multiple art installations. An intimate, holistic experience with access to a camping ground, food area, dipping spot, and unique sunsets. A true hidden gem.</p>
+              </div>
+            </div>
+          </Waves>
+          <Waves>
+            <div class="background">
+              <div class="quote">
+                <h3>TOGETHER, WE DREAM THE WAKING DREAM</h3>
+                <p>“A dream you dream alone is only a dream. A dream you dream together is reality”</p>
+              </div>
+            </div>
+          </Waves>
+        </main>
+        <footer><Footer /></footer>
+      </div>
     </main>
-    <footer><Footer /></footer>
+
+    <style>
+      .forside-main {
+        /* max-width: 1300px; */
+      }
+      .navn {
+        position: relative;
+        margin-top: 2rem;
+      }
+      #kune {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        padding-left: 3.5rem;
+        letter-spacing: -0.5rem;
+      }
+      #festival {
+        position: absolute;
+        bottom: 1.2%;
+        left: 0.5%;
+        color: rgb(191, 221, 247);
+        letter-spacing: 0.4rem;
+      }
+      .dates {
+        display: flex;
+        justify-content: end;
+      }
+      .ungdomsoen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .flex-item {
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+
+      .ungdomsoen_tekst p {
+        font-size: 1.2rem;
+      }
+      .ungdomsoen_tekst img {
+        border-radius: 3%;
+      }
+      .quote {
+        text-align: center;
+      }
+      .ungdomsoen_tekst {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 2rem;
+      }
+      .quote {
+        margin-bottom: 9rem;
+      }
+
+      @media (min-width: 850px) {
+        .ungdomsoen_tekst {
+          display: flex;
+          flex-direction: row-reverse;
+          gap: 2rem;
+        }
+        .ungdomsoen_tekst p {
+          font-size: 1.4rem;
+        }
+
+        .navn {
+          position: relative;
+        }
+        #festival {
+          left: -0.3%;
+          bottom: 1.5%;
+        }
+      }
+    </style>
   </body>
 </html>
-
-<style>
-  .forside-main {
-    /* max-width: 1300px; */
-  }
-  .navn {
-    position: relative;
-    margin-top: 2rem;
-  }
-  #kune {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    padding-left: 2rem;
-    letter-spacing: -0.5rem;
-  }
-  #festival {
-    position: absolute;
-    bottom: 1%;
-    left: 0.5%;
-    color: rgb(191, 221, 247);
-    letter-spacing: 0.3rem;
-  }
-  .dates {
-    display: flex;
-    justify-content: end;
-  }
-  .ungdomsoen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .flex-item {
-    flex-basis: 0;
-    flex-grow: 1;
-  }
-
-  .ungdomsoen_tekst p {
-    font-size: 1.2rem;
-  }
-  .ungdomsoen_tekst img {
-    border-radius: 3%;
-  }
-  .quote {
-    text-align: center;
-  }
-  .ungdomsoen_tekst {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    gap: 2rem;
-  }
-  .quote {
-    margin-bottom: 9rem;
-  }
-
-  @media (min-width: 850px) {
-    .ungdomsoen_tekst {
-      display: flex;
-      flex-direction: row-reverse;
-      gap: 2rem;
-    }
-    .ungdomsoen_tekst p {
-      font-size: 1.4rem;
-    }
-
-    .navn {
-      position: relative;
-    }
-    #festival {
-      left: -0.5%;
-      bottom: 1.5%;
-    }
-  }
-</style>

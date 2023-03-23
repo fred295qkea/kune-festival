@@ -1,2 +1,146 @@
 ---
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import Blob from "../components/blob.astro";
+import Artist from "../components/artist.astro";
+import "../style/main.css";
+
+const onsdag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.ONSDAG", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
+  },
+}).then((res) => res.json());
+
+const torsdag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.TORSDAG", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
+  },
+}).then((res) => res.json());
+const fredag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.FREDAG", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
+  },
+}).then((res) => res.json());
+
+const lørdag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.LØRDAG", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
+  },
+}).then((res) => res.json());
+
+const søndag = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister?dag=eq.SØNDAG", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
+  },
+}).then((res) => res.json());
+
+const data = await fetch("https://wzxcaefniwwgggpebhbz.supabase.co/rest/v1/Artister", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6eGNhZWZuaXd3Z2dncGViaGJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4NzE2ODgsImV4cCI6MTk5NDQ0NzY4OH0.bnekPU1htxCKraVVGX4o2mwA-S58i1jhIBmKNgc7qWc",
+  },
+}).then((res) => res.json());
 ---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/style/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Lineup</title>
+  </head>
+  <body>
+    <header><Header /></header>
+    <main>
+      <h1>LINEUP</h1>
+
+      <h3>WEDNESDAY <span class="date">JULY 20</span></h3>
+      <div class="lineup">
+        <div class="artists">
+          {
+            onsdag.map((artist) => {
+              return <Artist {artist} />;
+            })
+          }
+        </div>
+      </div>
+      <h3>THURSDAY <span class="date">JULY 21</span></h3>
+      <div class="lineup">
+        <div class="artists">
+          {
+            torsdag.map((artist) => {
+              return <Artist {artist} />;
+            })
+          }
+        </div>
+      </div>
+      <h3>FRIDAY <span class="date">JULY 22</span></h3>
+      <div class="lineup">
+        <div class="artists">
+          {
+            fredag.map((artist) => {
+              return <Artist {artist} />;
+            })
+          }
+        </div>
+      </div>
+      <h3>SATURDAY <span class="date">JULY 23</span></h3>
+      <div class="lineup">
+        <div class="artists">
+          {
+            lørdag.map((artist) => {
+              return <Artist {artist} />;
+            })
+          }
+        </div>
+      </div>
+      <h3>SUNDAY <span class="date">JULY 24</span></h3>
+      <div class="lineup">
+        <div class="artists">
+          {
+            søndag.map((artist) => {
+              return <Artist {artist} />;
+            })
+          }
+        </div>
+      </div>
+    </main>
+    <footer><Footer /></footer>
+  </body>
+</html>
+
+<style>
+  .date {
+    font-weight: bold;
+    color: #a2cbff;
+  }
+
+  h3 {
+    margin-top: 130px;
+    margin-bottom: 30px;
+  }
+
+  .lineup {
+    display: flex;
+    flex-direction: row;
+  }
+  /* .artists {
+    display: flex;
+    flex-direction: column;
+  } */
+
+  /* @media (min-width: 850px) {
+    .lineup {
+      display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 60px;
+    } */
+</style>
