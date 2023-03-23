@@ -22,7 +22,7 @@ import Waves from "../components/waves.astro";
     <header><Header /></header>
     <main>
       <h1>ABOUT</h1>
-      <h2>HISTORY</h2>
+      <h2 class="nomid">HISTORY</h2>
       <p>
         Being at KUNE Festival is an immersive experience that blends art, music, and the island’s natural beauty. The location’s secludedness adds to the sense of separation from everyday life. At the same time, the art invites us to engage in open discussions and imagine a world that can be different, making a positive impact over our mentality and worldview. In conjunction with the art, the music creates a holistic cultural experience representative of the modern, young Nordic artistic community. Most importantly, we strive to build an environment that values and celebrates what we call the ‘Otherness’ of the world. The Otherness is a concept that acknowledges the existence of people who may be similar to us in many ways yet possess traits, values, and characteristics that set them
         apart as “other.” Humans share a great deal in common, but we are also remarkably diverse regarding cultural or social norms, habits, or behavior. The Otherness element recognizes this diversity and encourages us to acknowledge, appreciate, and celebrate our differences. By embracing the Otherness, we create a more inclusive, compassionate, and open-minded world. Rather than viewing differences as a source of conflict or division, we recognize them as a source of strength and beauty. The Otherness element invites us to see the world through the eyes of others, to listen to their stories, and to appreciate their unique perspectives. In doing so, we expand our horizons and gain a more complex understanding of what it means to be human. On the more practical side of things, KUNE
@@ -71,6 +71,9 @@ import Waves from "../components/waves.astro";
     .grid_about {
       display: grid;
       grid-template-columns: 1fr 1fr;
+    }
+    main h2 .nomid {
+      text-align: none;
     }
     #order {
       order: -1;
