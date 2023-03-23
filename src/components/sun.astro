@@ -6,10 +6,10 @@ const { size = "normal" } = Astro.props;
   <defs>
     <style>
       .cls-1 {
-        stroke: black;
+        stroke: transparent;
         fill: none;
         stroke-miterlimit: 10;
-        z-index:10;
+        z-index: 10;
       }
     </style>
   </defs>
@@ -24,7 +24,7 @@ const { size = "normal" } = Astro.props;
       <style>
         .cls-2 {
           fill: url(#linear-gradient);
-          z-index:10;
+          z-index: 10;
           width: 400px;
         }
       </style>
@@ -39,21 +39,22 @@ const { size = "normal" } = Astro.props;
         <stop offset="1" stop-color="#de7914"></stop>
       </linearGradient>
     </defs>
-    <ellipse class="cls-2" cx="1300" cy="1300" rx="400" ry="400"></ellipse>
+    <ellipse class="cls-2" cx="1300" cy="1300" rx="600" ry="600"></ellipse>
   </svg>
 </div>
 
 <style>
-
-  
   .streg {
     width: 1000px;
     position: absolute;
     top: 20%;
     display: block;
-    z-index:10;
+    z-index: 10;
   }
 
+  svg {
+    width: 600px;
+  }
   .sun {
     position: absolute;
     top: 25%;
@@ -68,12 +69,12 @@ const { size = "normal" } = Astro.props;
 
   .normal {
     width: 20%;
-    z-index:10;
+    z-index: 10;
   }
 
   .large {
     width: 600px;
-    z-index:10;
+    z-index: 10;
   }
 
   @keyframes sun_kf {
@@ -85,28 +86,27 @@ const { size = "normal" } = Astro.props;
     }
   }
 
-
-  @media(max-width: 850px){
-    .streg{
+  @media (max-width: 850px) {
+    .streg {
       width: 400px;
-
-
-
     }
 
-    .sun{
+    svg {
+      width: 40%;
+    }
+
+    .sun {
       offset-distance: 32%;
       top: 15%;
     }
 
     @keyframes sun_kf {
-    from {
-      offset-distance: 0%;
+      from {
+        offset-distance: 0%;
+      }
+      to {
+        offset-distance: 32%;
+      }
     }
-    to {
-      offset-distance: 32%;
-    }
-  }
-    
   }
 </style>
