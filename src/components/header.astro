@@ -2,7 +2,7 @@
 ---
 
 <div class="nav_container">
-  <a href="/"><img src="/img/kune.png" alt="kune hjem-logo" /></a>
+<a href="/"><img src="/img/kune.png" alt="kune hjem-logo" /></a>
 
   <div id="burger-menu">
     <span></span>
@@ -44,7 +44,7 @@
     color: #fff;
     text-decoration: none;
     padding: 0.5em;
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
   #menu ul {
     text-align: center;
@@ -94,11 +94,14 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      position: relative;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .nav_container a {
+      margin-left: 30px;
     }
 
-    .nav_container img {
-      width: 30%;
-    }
     #burger-menu {
       display: block;
       cursor: pointer;
@@ -108,6 +111,8 @@
       overflow: visible;
       position: relative;
       z-index: 2;
+      position: absolute;
+      right: 2%;
     }
     #burger-menu span,
     #burger-menu span:before,
